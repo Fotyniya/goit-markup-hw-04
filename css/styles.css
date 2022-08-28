@@ -45,6 +45,11 @@ img {
 button {
     cursor: pointer;
 }
+/* Remove outline on the forms and links */
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
 /*========== HEADER =========*/
 .page-header-container {
     display: flex;
@@ -120,31 +125,38 @@ section {
     color: var(--accent-color);
 } 
 /* styles contacts */
-.mail, 
-.phone {
+.contacts-link {
+    display: flex;
+    gap: 10px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--text-color)
+    color: var(--text-color);
 }
-.contacts-link:hover, 
-.contacts-link:focus, 
-{
+.header-contacts-item:hover .mail-icon, 
+.header-contacts-item:focus .mail-icon{
+    fill:var(--accent-color);
     color: var(--accent-color);
 }
-.contacts-link {
-    display: flex;
-    gap: 10px;
+.header-contacts-item:hover .smartphone-icon, 
+.header-contacts-item:focus .smartphone-icon{
+    fill:var(--accent-color);
+    color: var(--accent-color);
+}
+.header-contacts-item:hover .contacts-link, 
+.header-contacts-item:focus .contacts-link{
+    color: var(--accent-color);
 }
 .mail-icon {
     width: 16px;
     height: 12px;
-    fill: var(--text-color)
+    fill: var(--text-color);
 }
 .smartphone-icon {
     width: 10px;
-    height: 16px; 
+    height: 16px;
+    fill: var(--text-color); 
 }
 /*=========== HERO ============*/
 .hero {
@@ -162,7 +174,6 @@ section {
     min-height: 600px;
     margin-left: auto;
     margin-right: auto;
-    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 .title-hero {
     margin-left: auto;
@@ -181,11 +192,12 @@ section {
     font-size: 16px;
     line-height: 1.875;
     color: #ffffff;
-    background-color: #2196F3;
+    background-color: var(--accent-color);
     border: 0;
     border-radius: 4px;
     padding: 10px 32px;
     letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /*========== ОСОБЛИВОСТІ ============*/
 .feature-items-list {
@@ -208,10 +220,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-   
-    width: 70px;
-    height: 70px;
-    /*  */
 }
 .title-section {
     font-size: 36px;
@@ -256,7 +264,7 @@ section {
 }
 /*========== НАША КОМАНДА ===========*/
 .our-team {
-    background-color: #f4f5fa;
+    background-color: #F5F4FA;
 }
 .employees {
     display: flex;
@@ -312,7 +320,6 @@ section {
 .social-list-link:focus .social-list-icon{
     fill: #ffffff;
 } 
-
 /* ========== ПОСТІЙНІ КЛІЄНТИ ======== */
 .clients-list {
     display: flex;
@@ -383,6 +390,28 @@ section {
 .phone-footer:focus {
     color: var(--accent-color);
 }
+.title-social {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.contacts-block {
+    display: flex;
+    align-items: baseline;
+}
+footer .social-list-icon {
+    fill: #ffffff;
+}
+footer .social-list-link {
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+.social-footer {
+    margin-left: 70px;
+}
 /*========== ПОРТФОЛІО ========= */
 .btn-filter-container {
     margin-bottom: 50px;
@@ -408,6 +437,7 @@ section {
 .button-filter:focus {
     background-color: var(--accent-color);
     color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
 .portfolio-container li{
     width: 370px;
@@ -428,6 +458,7 @@ section {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: var(--title-color);
 }
 .text-portfolio {
     font-size: 16px;
@@ -445,4 +476,10 @@ section {
     flex-wrap: wrap;
     gap: 30px;
 }
- 
+.portfolio-card {
+    display: block;
+}
+.portfolio-card:hover,
+.portfolio-card:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
