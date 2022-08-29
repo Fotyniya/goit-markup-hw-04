@@ -127,6 +127,7 @@ section {
 /* styles contacts */
 .contacts-link {
     display: flex;
+    align-items: center;
     gap: 10px;
     font-weight: 500;
     font-size: 14px;
@@ -134,18 +135,19 @@ section {
     letter-spacing: 0.02em;
     color: var(--text-color);
 }
-.header-contacts-item:hover .mail-icon, 
-.header-contacts-item:focus .mail-icon{
+.contacts-link:hover .mail-icon, 
+.contacts-link:focus .mail-icon{
     fill:var(--accent-color);
     color: var(--accent-color);
 }
-.header-contacts-item:hover .smartphone-icon, 
-.header-contacts-item:focus .smartphone-icon{
+.contacts-link:hover .smartphone-icon, 
+.contacts-link:focus .smartphone-icon{
     fill:var(--accent-color);
     color: var(--accent-color);
 }
-.header-contacts-item:hover .contacts-link, 
-.header-contacts-item:focus .contacts-link{
+.contacts-link:hover,
+.contacts-link:focus
+{
     color: var(--accent-color);
 }
 .mail-icon {
@@ -274,7 +276,7 @@ section {
 .employees-item {
     background-color: #ffffff;
     border-radius: 0px 0px 4px 4px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .employee, .career {
@@ -291,12 +293,13 @@ section {
 }
 .career {
     color: var(--text-color);
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 .social-list {
     display: flex;
     justify-content: center;
     column-gap: 10px;
+    padding-bottom: 30px;
 }
 .social-list-link {
     display: flex;
@@ -326,7 +329,7 @@ section {
     flex-wrap: wrap;
     gap: 30px;
 }
-.clients-item {
+.clients-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,19 +338,19 @@ section {
     width: 170px;
     height: 92px;
 }
-.clients-item:hover .clients-icon,
-.clients-item:focus .clients-icon{
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon{
     fill: var(--accent-color);
 }
-.clients-item:hover,
-.clients-item:focus{
-    border: 1px solid var(--accent-color);
+.clients-link:hover,
+.clients-link:focus{
+    border-color: var(--accent-color);
     cursor: pointer;
 }
 .clients-icon {
     display: flex;
-    width: 106px;
-    height: 60px;
+    /* width: 106px;
+    height: 60px; */
     fill: #AFB1B8; 
 }
 /*========== FOOTER ===========*/
