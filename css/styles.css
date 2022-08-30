@@ -143,7 +143,6 @@ section {
 .contacts-link:hover .smartphone-icon, 
 .contacts-link:focus .smartphone-icon{
     fill:var(--accent-color);
-    color: var(--accent-color);
 }
 .contacts-link:hover,
 .contacts-link:focus
@@ -405,6 +404,9 @@ section {
 .contacts-block {
     display: flex;
     align-items: baseline;
+}
+.social-list-footer {
+    padding-bottom: 0;
 }
 footer .social-list-icon {
     fill: #ffffff;
